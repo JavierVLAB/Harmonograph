@@ -37,7 +37,7 @@ void draw() {
     background(255);
 
     int points = 50000; /* points drawn per frame */
-    float t_max = 2500, t_step = t_max/points;
+    float t_max = 500, t_step = t_max/points;
     float t;
     stroke(0);
 
@@ -47,16 +47,19 @@ void draw() {
     // o4.init();
 
     for (t = 0; t < t_max; t += t_step) {
-
+      
 
       pos.x += o1.position(t) + o3.position(t);
       pos.y += o2.position(t) + o4.position(t);
 
       pushMatrix();
       translate(width/2, height/2);
-
+      line(pos.x,pos.y, pos0.x, pos0.y);
       point(pos.x, pos.y);
       popMatrix();
+      
+      pos0 = pos.copy();
+      
     }
     update= false;
   }

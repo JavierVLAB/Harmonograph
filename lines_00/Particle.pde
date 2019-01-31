@@ -25,8 +25,20 @@ class Particle {
     velocity = new PVector(random(-1, 1), random(-1, 1));
     position = new PVector(random(width), random(height));
     lifespan = 255.0;
-    L = random(10, 50);
-    c = color(0,50);
+    L = random(10, 70);
+    float r = random(1);
+    /*
+    if (r < 0.8) {
+      c = color(0, 50);
+    } else if (r < 0.95) {
+      c = color(255);
+    } else {
+      colorMode(HSB);
+      c = color(random(255),255,255,100);
+      colorMode(RGB);
+    }*/
+    
+    c = color(0, 80);
     //c = color(random(100, 255), random(100, 255), random(100, 255));
     da = random(0.01, 0.05);
   }

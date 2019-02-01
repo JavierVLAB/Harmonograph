@@ -3,9 +3,10 @@ ArrayList<Particle> particles = new ArrayList<Particle>();
 boolean pause = false;
 
 void setup() {
-  fullScreen();
+ // fullScreen();
+  size(1240,874);  // imprimeA4
   //size(600, 600);
-  for (int i = 0; i < 30; i++) {
+  for (int i = 0; i < 100; i++) {
     particles.add(new Particle());
     background(255);
     smooth();
@@ -29,4 +30,9 @@ void keyPressed(){
  if(key == 'p' || key == 'P'){
    pause = !pause; 
  }
+ 
+ if(key == 's' || key == 'S'){
+   save("myImg.png");
+ }
+ 
 }

@@ -29,7 +29,7 @@ class Particle {
     float r = random(1);
     
     if (r < 0.8) {
-      c = color(0, 150);
+      c = color(0, 80);
     } else if (r < 0.95) {
       c = color(255);
     } else {
@@ -63,8 +63,8 @@ class Particle {
     p.x = L*cos(angle)+position.x;
     p.y = L*sin(angle)+position.y;
     stroke(c, 100);
-    ellipse(position.x, position.y, 12, 12);
-    //line(position.x, position.y, p.x, p.y);
+    //ellipse(position.x, position.y, 12, 12);
+    line(position.x, position.y, p.x, p.y);
   }
 
   // Is the particle still useful?

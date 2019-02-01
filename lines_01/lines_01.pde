@@ -1,16 +1,21 @@
+import processing.pdf.*;
 ArrayList<Particle> particles = new ArrayList<Particle>();
 
 boolean pause = false;
 
+
 void setup() {
- // fullScreen();
-  size(1240,874);  // imprimeA4
+   fullScreen();
+  //size(1240, 874);  // imprimeA4
   //size(600, 600);
-  for (int i = 0; i < 100; i++) {
+  for (int i = 0; i < 40; i++) {
     particles.add(new Particle());
     background(255);
     smooth();
   }
+  
+  //beginRecord(PDF, "everything.pdf");
+  
 }
 
 void draw() {
@@ -24,15 +29,19 @@ void draw() {
       }
     }
   }
+
+
 }
 
-void keyPressed(){
- if(key == 'p' || key == 'P'){
-   pause = !pause; 
- }
- 
- if(key == 's' || key == 'S'){
-   save("myImg.png");
- }
- 
+void keyPressed() {
+  if (key == 'p' || key == 'P') {
+    pause = !pause;
+  }
+
+  if (key == 's' || key == 'S') {
+    //save("myImg.png");
+    save("myImg.tiff");
+    //endRecord();
+    //exit();
+  }
 }

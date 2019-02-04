@@ -29,9 +29,9 @@ class Particle {
     float r = random(1);
     
     if (r < 0.8) {
-      c = color(0, 80);
+      c = color(255, 80);
     } else if (r < 0.95) {
-      c = color(255);
+      c = color(0);
     } else {
         //colorMode(HSB);
       c = color(255,0,0,100);

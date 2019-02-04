@@ -10,7 +10,7 @@ void setup() {
   //size(600, 600);
   for (int i = 0; i < 40; i++) {
     particles.add(new Particle());
-    background(255);
+    background(0);
     smooth();
   }
   
